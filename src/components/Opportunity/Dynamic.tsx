@@ -46,19 +46,10 @@ const data = [
 ];
 
 const Dynamic = () => {
-	const [active, setActive] = useState<string>(() => {
-		let url = new URL(window.location.href);
-
-		return url.searchParams.get("view") ?? data[0].heading;
-	});
+	const [active, setActive] = useState<string>(data[0].heading);
 
 	const handleActive = (item: string) => {
 		setActive(item);
-
-		let url = new URL(window.location.href);
-		url.searchParams.set("view", item);
-
-		window.history.pushState({}, "", url);
 	};
 
 	let activeItem = data.find((item) => item.heading === active);
