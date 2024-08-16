@@ -1,0 +1,16 @@
+---
+import styles from "./footer.module.scss";
+const date = new Date();
+---
+
+<footer class={styles.footer}>
+	<div class={`container ${styles.container}`}>
+		<div class={styles.copyright}>
+			<p>
+				© {date.getFullYear()} Embassy of Repubic of Guinea Conakry in India
+				powered by
+				<a href="https://adgytec.in" target="_blank">Adgytec</a>
+			</p>
+		</div>
+	</div>
+</footer>

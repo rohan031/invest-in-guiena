@@ -34,3 +34,9 @@
 }
 
 
+
+@mixin nav {
+	@include screen-48 {
+		@content;
+	}
+}

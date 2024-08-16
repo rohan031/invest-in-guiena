@@ -1,0 +1,14 @@
+@use "/src/styles/abstracts" as ab;
+
+.footer {
+    margin-block-start: auto;
+    padding-block-end: 1.5em;
+
+    .copyright {
+		font-size: clamp(0.75rem, 1vi, 1rem);
+		text-align: center;
+		text-wrap: balance;
+
+		
+	}
+}
