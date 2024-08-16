@@ -17,41 +17,28 @@
 		gap: 2em;
 	}
 
-    .logoLink {
-        display: flex;
-        align-items: center;
-        gap: 2em;
-        justify-content: space-between;
+	.logo {
+		order: 1;
+		img {
+			width: 15rem;
+		}
 
-        flex-direction: row-reverse;
-        width: 100%;
-        
+		@include ab.nav {
+			order: 0;
+		}
+	}
 
-        @include ab.nav {
-            flex-direction: row;
-        }
-
-    }
-
-    .logo {
-
-        img {
-          width: 15rem;
-        }
-    }
-
-    .qr {
-        img {
-            width: 5rem;
-
-        }
-    }
+	.qr {
+		order: 2;
+		img {
+			width: 5rem;
+		}
+	}
 
 	.main {
-        @include ab.nav {
-            margin-inline: auto;
-        }
-
+		@include ab.nav {
+			margin-inline: auto;
+		}
 
 		.control {
 			input {
@@ -74,7 +61,9 @@
 					position: relative;
 					border-radius: 10px;
 
-					transition: rotate 300ms, translate 300ms;
+					transition:
+						rotate 300ms,
+						translate 300ms;
 
 					&::before,
 					&::after {
@@ -85,7 +74,10 @@
 						inset: 0;
 
 						background-color: var(--_bg);
-						transition: rotate 300ms, translate 300ms, opacity 100ms;
+						transition:
+							rotate 300ms,
+							translate 300ms,
+							opacity 100ms;
 					}
 
 					&::before {

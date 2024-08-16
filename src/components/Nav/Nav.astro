@@ -9,49 +9,46 @@ const items = [
 
 <nav class={styles.nav}>
 	<div class={`container ${styles.container}`}>
-		<div class={styles.logoLink}>
-			<div class={styles.logo}>
-				<a href="/">
+		<div class={styles.logo}>
+			<a href="/">
+				<img
+					src="/logo.svg"
+					alt="AMBASSADE DE LA REPUBLIQUE DE LA GUINEE CONAKRY EN INDE"
+				/>
+			</a>
+		</div>
+		<div class={styles.main}>
+			<div class={styles.control}>
+				<input id="nav" type="checkbox" />
+				<label for="nav">
+					<span></span>
+				</label>
+			</div>
+			<ul class={styles.links}>
+				{
+					items.map((item) => {
+						const { link, text } = item;
+						return (
+							<li class={styles.link_item}>
+								<a
+									data-path={link}
+									class={`link ${styles.link}`}
+									href={link}
+								>
+									{text}
+								</a>
+							</li>
+						);
+					})
+				}
+				<li class={styles.nav_logo}>
 					<img
 						src="/logo.svg"
 						alt="AMBASSADE DE LA REPUBLIQUE DE LA GUINEE CONAKRY EN INDE"
 					/>
-				</a>
-			</div>
-			<div class={styles.main}>
-				<div class={styles.control}>
-					<input id="nav" type="checkbox" />
-					<label for="nav">
-						<span></span>
-					</label>
-				</div>
-				<ul class={styles.links}>
-					{
-						items.map((item) => {
-							const { link, text } = item;
-							return (
-								<li class={styles.link_item}>
-									<a
-										data-path={link}
-										class={`link ${styles.link}`}
-										href={link}
-									>
-										{text}
-									</a>
-								</li>
-							);
-						})
-					}
-					<li class={styles.nav_logo}>
-						<img
-							src="/logo.svg"
-							alt="AMBASSADE DE LA REPUBLIQUE DE LA GUINEE CONAKRY EN INDE"
-						/>
-					</li>
-				</ul>
-			</div>
+				</li>
+			</ul>
 		</div>
-
 		<div class={styles.qr}>
 			<img src="/qr.png" alt="" />
 		</div>
