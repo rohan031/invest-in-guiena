@@ -33,10 +33,14 @@
 	}
 }
 
-
-
 @mixin nav {
 	@include screen-48 {
+		@content;
+	}
+}
+
+@mixin invest {
+	@include screen-64 {
 		@content;
 	}
 }
