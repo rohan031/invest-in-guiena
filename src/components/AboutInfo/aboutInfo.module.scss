@@ -1,0 +1,89 @@
+@use "/src/styles/abstracts" as ab;
+
+.about {
+	--_gap: 1.25rem;
+
+	* {
+		font-size: clamp(1rem, 1.5vi, 1.25rem);
+		font-weight: 500;
+	}
+
+	strong {
+		font-weight: 700;
+	}
+
+	ul,
+	ol {
+		padding: 0;
+		list-style-position: inside;
+
+		display: grid;
+		gap: 0.5rem;
+
+		li::marker {
+			font-weight: bold;
+		}
+	}
+
+	img {
+		width: 100%;
+		height: auto;
+
+		object-fit: cover;
+	}
+
+	ul {
+		list-style-type: "-";
+	}
+
+	.infoImage {
+		@include ab.about {
+			display: none;
+		}
+	}
+
+	.images {
+		display: none;
+		grid-area: images;
+
+		@include ab.about {
+			display: grid;
+			align-content: space-around;
+		}
+
+		img {
+			width: auto;
+			max-width: 20rem;
+			height: auto;
+			object-fit: cover;
+		}
+	}
+
+	.text {
+		display: grid;
+		gap: var(--_gap);
+
+		.infoImage {
+			margin: 0;
+		}
+	}
+
+	.info {
+		grid-area: info;
+
+		display: grid;
+		gap: var(--_gap);
+	}
+
+	.container {
+		display: grid;
+		row-gap: 1em;
+		column-gap: 1.5em;
+
+		grid-template-areas: "info";
+
+		@include ab.about {
+			grid-template-areas: "info images";
+		}
+	}
+}

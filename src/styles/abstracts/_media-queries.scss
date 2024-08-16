@@ -44,3 +44,9 @@
 		@content;
 	}
 }
+
+@mixin about {
+	@include screen-64 {
+		@content;
+	}
+}
