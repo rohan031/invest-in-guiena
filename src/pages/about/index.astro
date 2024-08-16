@@ -1,5 +1,10 @@
 ---
+import Hero from "@components/Hero/Hero.astro";
 import Layout from "@layouts/Layout.astro";
+import { Fragment } from "astro/jsx-runtime";
+
+const text =
+	"The Republic of Guinea is located in the southwest of West Africa, covering an area of 245,857 km². It is bordered by six countries: Guinea-Bissau to the west, Senegal and Mali to the north, Côte d’Ivoire to the east, and Liberia and Sierra Leone to the south. Guinea is a coastal country with 300 km of maritime coastline along the Atlantic Ocean";
 ---
 
-<Layout title="Invest in Guinea - About"> about </Layout>
+<Layout title="Invest in Guinea - About"> <Hero title={text} /> </Layout>

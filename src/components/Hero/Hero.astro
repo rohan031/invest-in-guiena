@@ -1,0 +1,25 @@
+---
+import styles from "./hero.module.scss";
+
+interface Props {
+	title: string;
+	hasLink?: boolean;
+	large?: boolean;
+}
+
+const { title, hasLink, large } = Astro.props;
+---
+
+<div class={styles.hero}>
+	<div class={`container ${styles.container}`}>
+		<h1 class={large ? styles.large : ""}>{title}</h1>
+
+		{
+			hasLink && (
+				<div class={styles.link}>
+					<a href="/about">Know more</a>
+				</div>
+			)
+		}
+	</div>
+</div>

@@ -6,9 +6,9 @@
 :root {
 	--white: #ffffff;
 	--black: #000000;
-    --green:#138756;
-    --yellow: #FFCC00;
-    --grey: #363636;
+	--green: #138756;
+	--yellow: #ffcc00;
+	--grey: #363636;
 
 	--text: var(--black);
 
@@ -16,7 +16,7 @@
 	--accent-primary-hover: hsl(from var(--accent-primary) h s calc(l + 10));
 	--accent-primary-active: hsl(from var(--accent-primary) h s calc(l - 10));
 
-    --accent-secondary: var(--yellow);
+	--accent-secondary: var(--yellow);
 	--accent-secondary-hover: hsl(
 		from var(--accent-secondary) h s calc(l + 10)
 	);
@@ -24,7 +24,7 @@
 		from var(--accent-secondary) h s calc(l - 10)
 	);
 
-	--max-width: 78rem;
+	--max-width: 75rem;
 	--max-width-wide: 90rem;
 
 	--linkedin: #0077b5;
@@ -58,12 +58,4 @@ body {
 
 .accent {
 	color: var(--accent-primary);
-}
-
-h1 {
-	font-size: clamp(2.25rem, 4.5vi, 4rem);
-}
-
-h2 {
-	font-size: clamp(1.75rem, 4vi, 3.5rem);
 }

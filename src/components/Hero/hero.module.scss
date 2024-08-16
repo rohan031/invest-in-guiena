@@ -1,0 +1,63 @@
+@use "/src/styles/abstracts" as ab;
+
+.hero {
+	--_overlay: hsl(0 0% 0% / 0.6);
+
+	min-height: 22.5rem;
+	display: grid;
+	place-items: center;
+
+	border-image: fill 0 linear-gradient(var(--_overlay), var(--_overlay));
+	background-image: url("/hero.webp");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+
+	padding-block: 4em;
+
+	.container {
+		display: grid;
+		gap: 2em;
+	}
+
+	.link {
+		text-align: center;
+
+		a {
+			color: var(--text);
+			display: inline-block;
+
+			padding: 0.5em 2em;
+
+			font-size: 1.25rem;
+			background-color: var(--white);
+			font-weight: 600;
+
+			text-decoration: none;
+			border-radius: 0.5em;
+
+			transition: opacity 300ms;
+
+			&:hover {
+				opacity: 0.75;
+			}
+		}
+	}
+
+	h1 {
+		font-size: clamp(1.25rem, 1.75vi, 1.5rem);
+		text-align: center;
+		text-wrap: balance;
+		font-weight: 500;
+		color: var(--white);
+
+		line-height: clamp(1.75rem, 2vi, 2rem);
+
+		&.large {
+			font-size: clamp(2.5rem, 4vi, 3.5rem);
+			font-weight: 700;
+
+			line-height: normal;
+		}
+	}
+}
