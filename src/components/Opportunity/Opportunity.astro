@@ -1,0 +1,15 @@
+---
+import Dynamic from "./Dynamic";
+import styles from "./opportunity.module.scss";
+---
+
+<div class={styles.opportunity}>
+	<div class={`container ${styles.container}`}>
+		<p>
+			Guinea offers numerous investment opportunities, particularly in the
+			following sectors:
+		</p>
+	</div>
+
+	<Dynamic client:only />
+</div>

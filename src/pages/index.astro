@@ -1,5 +1,6 @@
 ---
 import Hero from "@components/Hero/Hero.astro";
+import Opportunity from "@components/Opportunity/Opportunity.astro";
 import Layout from "@layouts/Layout.astro";
 import { Fragment } from "astro/jsx-runtime";
 
@@ -9,4 +10,6 @@ const text =
 
 <Layout title="Invest in Guinea - Home">
 	<Hero title={text} hasLink={true} />
+
+	<Opportunity />
 </Layout>
